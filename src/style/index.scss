@@ -92,15 +92,7 @@ main {
   flex-direction: column;
 }
 
-@media screen and (max-width: 500px) {
-
-  .left-block {
-    width: 244px;
-  }
-
-  .right-block {
-    padding-right: calc(100% - 224px);
-  }
+@media screen and (max-width: 1324px) {
 
   .user-post-active,
   .user-post-set-comment input {
@@ -113,6 +105,8 @@ main {
   }
 
 }
+
+
 
 .post-list {
   margin: 0;
@@ -139,11 +133,13 @@ main {
   margin-left: 25px
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1300px) {
   .user-post:nth-child(1n-2) {
     margin-left: 25px;
     margin-right: 0;
   }
+
+
 }
 
 .user-post-title {

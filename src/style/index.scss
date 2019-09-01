@@ -1,0 +1,270 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100%;
+
+
+}
+
+.App {
+  display: flex;
+  background-color: #21523D;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display:flex;
+}
+
+
+
+.left-block {
+  min-height: 100%;
+  width: 20%;
+  .left-block-logo {
+    margin: 32px auto;
+    width: 53px;
+    height: 27px;
+    background: url("./logo.ilex.svg") no-repeat;
+  }
+
+  .left-block-caption {
+    display: block;
+    text-align: left;
+    padding-left: 30px;
+    color: #fff;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    margin-top: 52px;
+  }
+
+  .app-users-list {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    li {
+      display: flex;
+      padding-left: 23px;
+      align-items: center;
+      vertical-align: center;
+      height: 48px;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+    }
+    li:hover {
+      cursor: pointer;
+      background-color: #225740;
+    }
+  }
+}
+
+.active_user {
+  border-left: 4px #26CF88 solid;
+  background-color:  #225740;
+
+  .user-photo {
+    margin-left: 6px;
+  }
+}
+
+.user-photo {
+  border-radius: 19px;
+  margin: 10px;
+  width: 38px;
+  height: 38px;
+  background: url("./user.png") -30px  ;
+}
+
+.ilex {
+  background: url("./logo.ilex.small.svg") #505050 no-repeat 12px 15px ;
+}
+
+.right-block {
+  background-color: #252525;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.user-post {
+  position: relative;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: white;
+  width: 315px;
+  height: 208px;
+  border-radius: 2px;
+  background-color: #2F2F2F;
+}
+
+.user-post:nth-child(3n-2),
+.user-post-active:nth-child(3n-2) {
+  margin-left: 25px
+}
+
+@media screen and (max-width: 1450px) {
+  .user-post:nth-child(1n-2) {
+    margin-left: 25px;
+    margin-right: 0;
+  }
+}
+
+.user-post-title {
+  display: block;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.user-post-content {
+  font-size: 13px;
+  display: block;
+  line-height: 150%;
+}
+
+.user-post-comments-footer {
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.user-post-open-comments {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  background: url("./comment.ico.svg") no-repeat;
+}
+
+.user-post-quantity-comments {
+  margin-top: 1px;
+  margin-left: 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 23px;
+  color: #666666;
+}
+
+.user-post-active {
+  position: relative;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: white;
+  width: 315px;
+  border-radius: 2px;
+  background-color: #2F2F2F;
+}
+
+.user-post-comment-caption {
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  color: #666666;
+}
+
+.user-post-set-comment {
+  display: block;
+  position: relative;
+  input {
+    outline: none;
+    padding-right: 80px;
+    background: #272727;
+    border: 1px solid #222222;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: white;
+    width: 319px;
+    height: 34px;
+  }
+  button {
+    color: #666666;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: #272727;
+    text-transform: uppercase;
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 69px;
+    height: 26px;
+  }
+  button:hover {
+    color: #21523D;
+    cursor: pointer;
+  }
+}
+
+.user-post-edit-comment:hover {
+  cursor: pointer;
+}
+
+.user-post-comments {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.user-post-added-comment {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #272727;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 150%
+}
+
+.user-post-added-comment:last-child {
+  border: none;
+}
+
+.right-block-search {
+  display: flex;
+  margin-bottom: 76px;
+  input {
+    padding-left: 40px;
+    color: lightgrey;
+    font-size: 18px;
+    font-weight: normal;
+    outline: none;
+    width: 638px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin: 25px 0 0 25px;
+    background: #2D2D2D url("search.svg") no-repeat 10px center;
+  }
+}

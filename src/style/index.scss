@@ -93,10 +93,30 @@ main {
   flex-direction: column;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 376px) {
+
+  .left-block {
+    width: 244px;
+  }
+  .right-block {
+    padding-right: calc(100% - 224px);
+  }
+  .right-block-search {
+    .search {
+      width: 140px ;
+    }
+  }
+
+  .user-post-active {
+    width: auto;
+  }
+
+  .user-post-active:nth-child(1n+1) {
+    margin-left: 25px;
+    margin-right: 0;
+  }
 
 }
-
 
 .post-list {
   margin: 0;

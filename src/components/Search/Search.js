@@ -11,7 +11,9 @@ function Search({setSearchQuery}) {
     return (
         <div className={"right-block-search"}>
 
-            <input type="text"
+            <input
+                   className={"search"}
+                   type="text"
                    onChange={filterBySearchQuery}
 
             />

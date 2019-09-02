@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/snov-front-end-test/static/css/main.9b585c8e.chunk.css",
-    "main.js": "/snov-front-end-test/static/js/main.ec051981.chunk.js",
-    "main.js.map": "/snov-front-end-test/static/js/main.ec051981.chunk.js.map",
+    "main.css": "/snov-front-end-test/static/css/main.82168f67.chunk.css",
+    "main.js": "/snov-front-end-test/static/js/main.486c39d2.chunk.js",
+    "main.js.map": "/snov-front-end-test/static/js/main.486c39d2.chunk.js.map",
     "runtime~main.js": "/snov-front-end-test/static/js/runtime~main.549e4d29.js",
     "runtime~main.js.map": "/snov-front-end-test/static/js/runtime~main.549e4d29.js.map",
     "static/js/2.7fdc99c0.chunk.js": "/snov-front-end-test/static/js/2.7fdc99c0.chunk.js",
     "static/js/2.7fdc99c0.chunk.js.map": "/snov-front-end-test/static/js/2.7fdc99c0.chunk.js.map",
     "index.html": "/snov-front-end-test/index.html",
-    "precache-manifest.d714428d5159e266f74469891ab65f9e.js": "/snov-front-end-test/precache-manifest.d714428d5159e266f74469891ab65f9e.js",
+    "precache-manifest.a0ddcba7efc5240b7a35bfa06076606c.js": "/snov-front-end-test/precache-manifest.a0ddcba7efc5240b7a35bfa06076606c.js",
     "service-worker.js": "/snov-front-end-test/service-worker.js",
-    "static/css/main.9b585c8e.chunk.css.map": "/snov-front-end-test/static/css/main.9b585c8e.chunk.css.map",
+    "static/css/main.82168f67.chunk.css.map": "/snov-front-end-test/static/css/main.82168f67.chunk.css.map",
     "static/media/index.scss": "/snov-front-end-test/static/media/user.96800f85.png"
   }
 }

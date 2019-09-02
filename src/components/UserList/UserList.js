@@ -2,12 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import User from './User/User';
 
-function UserList({users, posts, activeUser, setVisiblePosts, setActiveUser}) {
+function UserList({users, posts, activeUser, setActiveUser}) {
 
     const styleFirstLi = !activeUser ? 'active_user' : '';
 
     function resetVisiblePosts() {
-        setVisiblePosts(posts);
         setActiveUser(null);
     }
 
@@ -48,11 +47,6 @@ const mapDispatchProps = (dispatch) => {
         setActiveUser: (user) => dispatch({
             type: "SET_ACTIVE_USER",
             activeUser: user
-        }),
-
-        setVisiblePosts: (visiblePosts) => dispatch({
-            type: "SET_VISIBLE_POSTS",
-            visiblePosts: visiblePosts
         }),
     }
 };

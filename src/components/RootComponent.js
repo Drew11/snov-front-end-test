@@ -41,25 +41,27 @@ class RootComponent extends React.Component {
 
                     <div className={"left-block"}>
 
-                        <div className={"left-block-logo"}>
-                        </div>
+                        <a href={"https://drew11.github.io/snov-front-end-test/"}>
+                            <div className={"left-block-logo"}/>
+                        </a>
 
                         <span className={"left-block-caption"}>
                             Subscriptions
                         </span>
 
                         <UserList/>
+
                     </div>
 
                     <div className={"right-block"}>
+
                         <Search/>
+
                         <PostList/>
+
                     </div>
 
                 </main>
-
-                <footer>
-                </footer>
             </div>
         );
     }

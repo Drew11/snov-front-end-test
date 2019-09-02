@@ -20,7 +20,7 @@ main {
 
 .left-block {
   min-height: 100%;
-  width: 244px;
+  min-width: 244px;
   background-color: #21523D;
   .left-block-logo {
     margin: 32px auto;
@@ -59,7 +59,8 @@ main {
     }
     li:hover {
       cursor: pointer;
-      background-color: #225740;
+      transition: background .2ms ease;
+      background: #225740;
     }
   }
 }
@@ -87,7 +88,7 @@ main {
 
 .right-block {
   background-color: #252525;
-  width: calc(100% - 244px);
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -104,11 +105,25 @@ main {
     margin-right: 0;
   }
 
+  .user-post:nth-child(1n-2) {
+    margin-left: 25px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .left-block {
+    display: none;
+  }
+
+  .right-block {
+    width: 100%;
+  }
 }
 
 
-
 .post-list {
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
@@ -131,15 +146,6 @@ main {
 .user-post:nth-child(3n-2),
 .user-post-active:nth-child(3n-2) {
   margin-left: 25px
-}
-
-@media screen and (max-width: 1300px) {
-  .user-post:nth-child(1n-2) {
-    margin-left: 25px;
-    margin-right: 0;
-  }
-
-
 }
 
 .user-post-title {
@@ -211,6 +217,7 @@ main {
   input {
     outline: none;
     padding-right: 80px;
+    padding-left: 10px;
     background: #272727;
     border: 1px solid #222222;
     box-sizing: border-box;

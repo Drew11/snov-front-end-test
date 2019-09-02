@@ -13,7 +13,8 @@ function CommentList({id, comments, addComment}) {
 
     const currentPostComments = comments.filter(comment => comment.id === id);
 
-    function checkComment(comm) {
+    function checkComment(event, comm) {
+        event.preventDefault();
         if (comm.text === '') {
             return;
         }
@@ -37,16 +38,21 @@ function CommentList({id, comments, addComment}) {
             </ul>
 
 
-            <div className={"user-post-set-comment"}>
+            <form className={"user-post-set-comment"}>
                 <input
-                    onChange={(event) => addString(event.target.value)}
+                    placeholder={"Type your message"}
+                    onChange={(event)=> {
+                        addString(event.target.value);
+                        event.preventDefault();
+                    }}
+
                 />
                 <button
-                    onClick={() => checkComment(comment)}
+                    onClick={(event) => checkComment(event, comment)}
                 >
                     Add
                 </button>
-            </div>
+            </form>
 
         </React.Fragment>
     )

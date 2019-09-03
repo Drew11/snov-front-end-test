@@ -2,11 +2,10 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import CommentList from '../../CommentList/CommentList'
 
-function Post({id, title, content, comments}) {
+function Post({post, comments, style, activePost, setActivePost}) {
 
-    const [editing, setEditing] = useState(false);
-    const quantityComments = comments.filter(comment => comment.id === id).length;
-    const style = editing ? "user-post-active" : "user-post";
+
+    const quantityComments = comments.filter(comment => comment.id === post.id).length;
 
     return (
 
@@ -14,18 +13,22 @@ function Post({id, title, content, comments}) {
         >
             <div>
                 <span className={"user-post-title"}>
-                        {title}
+                        {post.title}
                 </span>
 
                 <span className={"user-post-content"}>
-                         {content}
+                         {post.body}
                 </span>
 
                 <div className={"user-post-comments-footer"}>
 
                     <div className={"user-post-open-comments"}
                          onClick={() => {
-                             setEditing(!editing)
+                           if(style==='user-post-active'){
+                             setActivePost(null)
+                           }else
+                           setActivePost(post);
+
                          }}
                     >
                     </div>
@@ -38,7 +41,7 @@ function Post({id, title, content, comments}) {
 
             </div>
             {
-                editing ? <CommentList id={id}/> : null
+              style==='user-post-active' ? <CommentList id={post.id}/> : null
             }
         </li>
     )

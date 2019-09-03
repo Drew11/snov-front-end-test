@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import Comment from './Comment/Comment'
 
-
 function CommentList({id, comments, addComment}) {
 
     const [str, addString] = useState('');

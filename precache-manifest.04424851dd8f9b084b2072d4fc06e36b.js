@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "efc763d0dfb3cf201731bca163744dba",
+    "revision": "e9975763600e67b4c69b39e5edccfe66",
     "url": "/snov-front-end-test/index.html"
   },
   {
-    "revision": "29a54f9ceaf79cd1a81b",
+    "revision": "9356fa54d737a2030bbd",
     "url": "/snov-front-end-test/static/css/main.9e3ca109.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/snov-front-end-test/static/js/2.7fdc99c0.chunk.js"
   },
   {
-    "revision": "29a54f9ceaf79cd1a81b",
-    "url": "/snov-front-end-test/static/js/main.8a56b647.chunk.js"
+    "revision": "9356fa54d737a2030bbd",
+    "url": "/snov-front-end-test/static/js/main.3a5b13e2.chunk.js"
   },
   {
     "revision": "dadaac746623bbb0cbc8",

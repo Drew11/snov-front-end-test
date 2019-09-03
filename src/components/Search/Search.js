@@ -15,8 +15,8 @@ function Search({setSearchQuery}) {
                    className={"search"}
                    type="text"
                    onChange={filterBySearchQuery}
-
             />
+
         </div>
     )
 }

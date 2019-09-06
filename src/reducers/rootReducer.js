@@ -43,10 +43,37 @@ const reducer = (state, action) => {
         case "ADD_COMMENT":
             const copy = [...state.comments];
             copy.push(action.comment);
+
             return {
                 ...state,
                 comments: copy
             };
+        case "SET_EDIT_COMMENT":
+
+             const updateComments =  state.comments.map((comment,index)=>{
+                 const copyComment = {...comment};
+
+                 if(index===action.indexComment){
+                     copyComment.text = action.editingComment;
+                 }
+
+                 return copyComment;
+             });
+
+            return {
+              ...state,
+              comments: updateComments
+            };
+
+        case "REMOVE_COMMENT":
+          const copyComments = [...state.comments];
+          const updateCommentsRemove = copyComments.filter((comment, index)=>index !== action.indexComment);
+
+          return {
+            ...state,
+            comments: updateCommentsRemove
+          };
+
         default:
             return state;
     }

@@ -5,19 +5,24 @@ import Comment from './Comment/Comment'
 function CommentList({id, comments, addComment}) {
 
     const [str, addString] = useState('');
-    const comment = {
-        id: id,
-        text: str
-    };
+
+
 
     const currentPostComments = comments.filter(comment => comment.id === id);
 
-    function checkComment(event, comm) {
-        event.preventDefault();
-        if (comm.text === '') {
-            return;
-        }
-        addComment(comm);
+    function checkComment(event, string) {
+      event.preventDefault();
+
+      if (string === '') {
+        return;
+      }
+      const comment = {
+        id: id,
+        text: str
+      };
+
+      addComment(comment);
+      addString('');
     }
 
     return (
@@ -30,7 +35,7 @@ function CommentList({id, comments, addComment}) {
                     currentPostComments.map((comment, index) =>
                         <Comment
                             key={index}
-                            comment={comment.text}
+                            comment={comment}
                         />
                     )
                 }
@@ -40,6 +45,7 @@ function CommentList({id, comments, addComment}) {
             <form className={"user-post-set-comment"}>
                 <input
                     placeholder={"Type your message"}
+
                     onChange={(event)=> {
                         addString(event.target.value);
                         event.preventDefault();
@@ -47,7 +53,7 @@ function CommentList({id, comments, addComment}) {
 
                 />
                 <button
-                    onClick={(event) => checkComment(event, comment)}
+                    onClick={(event) => checkComment(event, str)}
                 >
                     Add
                 </button>

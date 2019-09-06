@@ -273,6 +273,27 @@ main {
   border: none;
 }
 
+.post-comment-edit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  span {
+    color: #666666;
+    width: min-content;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+  }
+  span:hover{
+    cursor: pointer;
+    color: #21523D;
+  }
+}
+
+
 .right-block-search {
   display: flex;
   margin-bottom: 76px;
@@ -289,4 +310,49 @@ main {
     margin: 25px 0 0 25px;
     background: #2D2D2D url("search.svg") no-repeat 10px center;
   }
+}
+
+.editing-comment {
+  input {
+    outline: none;
+    color: white;
+    background: #272727;
+    border: 1px solid #222222;
+    border-radius: 3px;
+  }
+
+  div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button {
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background: #272727;
+    color: #666666;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  button:hover {
+    color: #21523D;
+    cursor: pointer;
+  }
+
+}
+
+
+.remove-comment {
+  position: relative;
+  bottom: 30px;
+  left: 290px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: url("./x.svg") no-repeat;
 }

@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import CommentList from '../../CommentList/CommentList'
 
 function Post({post, comments, style, activePost, setActivePost}) {
-
 
     const quantityComments = comments.filter(comment => comment.id === post.id).length;
 

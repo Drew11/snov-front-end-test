@@ -5,12 +5,11 @@ import Comment from './Comment/Comment'
 function CommentList({id, comments, addComment}) {
 
     const [str, addString] = useState('');
-
-
-
     const currentPostComments = comments.filter(comment => comment.id === id);
+    let textInput;
 
     function checkComment(event, string) {
+
       event.preventDefault();
 
       if (string === '') {
@@ -23,6 +22,7 @@ function CommentList({id, comments, addComment}) {
 
       addComment(comment);
       addString('');
+      textInput.value='';
     }
 
     return (
@@ -44,9 +44,10 @@ function CommentList({id, comments, addComment}) {
 
             <form className={"user-post-set-comment"}>
                 <input
+                    ref={(input) => textInput = input}
                     placeholder={"Type your message"}
-
                     onChange={(event)=> {
+
                         addString(event.target.value);
                         event.preventDefault();
                     }}
